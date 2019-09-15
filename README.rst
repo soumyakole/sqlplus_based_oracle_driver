@@ -1,40 +1,13 @@
-sqlplus\_commando
-=================
+This is an extension of sqlplus\_commando to enable Oracle Proc execution
+==========================================================================
 
-Installing a Oracle driver on a machine is sometime a pain, or even
-impossible. Furthermore you may want to distribute self contained
-scripts that access Oracle without having to ask for additional software
-installation. Finally, you may want to automate scripts that should run
-with SQL\*Plus.
+Original sqlplus\_commando is available in https://pypi.org/project/sqlplus_commando/
 
-*sqlplus\_commando* is a pure Python Oracle driver that calls *sqlplus*
-on the command line. It was designed so that you may use it by dropping
-its module in your source tree or even copy its classes in your own
-source code.
-
-Installation
-------------
-
-To install *sqlplus\_commando*, you may use one of the following
-methods:
-
--  Extract classes ``SqlplusCommando``, ``OracleResultParser`` and
-   ``OracleErrorParser`` from tarball (in file
-   *sqlplus\_commando/sqlplus\_commando.py*) and put it in your own
-   source code.
--  Drop its module (file *sqlplus\_commando/sqlplus\_commando.py* in the
-   tarball) in your source directory.
--  Install it using PIP, typing ``pip install sqlplus_commando``.
--  Install from tarball typing ``python setup.py install``.
-
-The Apache license grants you a right to use this driver in any of your
-project (even commercial) provided that you mention that you are using
-*sqlplus\_commando* in your copyright notice.
 
 Usage
 -----
 
-You can use this driver in your code just like so:
+Just clone this repository and then you can use this driver in your code just like so:
 
 .. code:: python
 
@@ -145,10 +118,3 @@ often necessary to check for warnings in *sqlplus* output. This is done
 by default and will result in an exception, except if you pass
 ``check_warning=False`` calling ``run_query`` or ``run_script``.
 
-Note
-----
-
-This module is not intended to replace an genuine Oracle driver that you
-**SHOULD** use if you can install it on the target machine.
-
-Enjoy!
